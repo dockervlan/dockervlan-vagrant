@@ -47,7 +47,7 @@ vagrant ssh
 
 8) Create the docker network for VLAN with id 200
 ```
-./docker-1.8.0-dev_5 network create -d bridge --vlanid=200 --ifname=eth1 --bip=20.0.1.1/16 --fixed-cidr=20.0.1.64/26 br200
+./docker-1.8.0-dev network create -d bridge --vlanid=200 --ifname=eth1 --bip=20.0.1.1/16 --fixed-cidr=20.0.1.64/26 br200
 ```
 
 9) Confirm that the br200 and eth1.200 has been created
@@ -57,8 +57,8 @@ ifconfig -a | less
 
 10) Create two docker containers
 ```
-./docker-1.8.0-dev_5 run -ti --net br200 ubuntu
-./docker-1.8.0-dev_5 run -ti --net br200 ubuntu
+./docker-1.8.0-dev run -ti --net br200 ubuntu
+./docker-1.8.0-dev run -ti --net br200 ubuntu
 ```
 
 11) Confirm that the containers exist and view the underlying IPs
