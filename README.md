@@ -101,4 +101,24 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
         "SecondaryIPAddresses": null,
         "SecondaryIPv6Addresses": null
 ```
-13) Attach one of the docker containers and ping to the other
+13) Attach one of the docker containers and ping to the other. This setup demonstrates the communication between two container within the same host.
+
+## Multiple rancheros instances.
+
+1) It is possible to have multiple rancher-Os instanses and to demonstrate the interconnectivity between containers on different hosts. First step is to modify the Vagrantfile under the os-vagrant directory modifying number_of_nodes from 1 to the number of virtualboxes you want to be created.  In our example 2
+
+```
+..
+
+$number_of_nodes = 2
+..
+```
+
+2) Up and Running
+
+```
+vagrant up
+vagrant ssh
+```
+
+3) Follow the steps in #Geting started for multiple hosts ensuring that there is not overlapping with IP Addresses and ensuring the traffic is not blocked between the hosts (i.e. Antivirutys)
