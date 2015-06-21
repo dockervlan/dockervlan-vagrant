@@ -1,0 +1,15 @@
+docker:
+  image: docker
+  links:
+  - network
+  net: host
+  pid: host
+  ipc: host
+  privileged: true
+  restart: always
+  volumes_from:
+  - all-volumes
+  labels:
+    io.rancher.os.scope: system
+  volumes:
+  - "/var/lib/rancher/state/opt/bin/docker-1.8.0-dev:/usr/bin/docker"
