@@ -7,7 +7,7 @@ require_relative 'vagrant_rancheros_guest_plugin.rb'
 $rsync_folder_disabled = false
 $number_of_nodes = 2
 $vm_mem = "1024"
-$vb_gui = true
+$vb_gui = false
 
 #download_docker_experimental = "https://github.com/dockervlan/dockervlan-vagrant/releases/tag/latest"
 download_docker_experimental = ""
@@ -28,6 +28,7 @@ Vagrant.configure(2) do |config|
         node.vm.provider "virtualbox" do |vb|
             vb.memory = $vm_mem
             vb.gui = $vb_gui
+            vb.customize ['modifyvm', :id, '--nictype1', 'Am79C973']
         end
 
         ip = "172.19.8.#{i+100}"

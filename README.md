@@ -110,7 +110,10 @@ vagrant ssh
 ```
 
 3) Host 1 - Create Network
+
+```
 /opt/bin/docker-1.8.0-dev network create -d bridge --vlanid=101 --ifname=eth1 --bip=172.16.1.1/16 --fixed-cidr=172.16.1.0/24 vlan101
+```
 
 4) Host 1 - Create Container with Static IP
 
