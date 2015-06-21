@@ -7,7 +7,7 @@ Quickly checkout dockervlan using Vagrant/Virtualbox.
 * Virtualbox (Tested with 4.3.22)
 * Vagrant (Tested with 1.7.2)
 
-2.) Clone rancherio/os-vagrant
+2.) Clone rancherio/os-vagrant https://github.com/rancherio/os-vagrant.git
 
 ```
 git clone https://github.com/rancherio/os-vagrant.git
