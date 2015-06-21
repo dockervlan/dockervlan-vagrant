@@ -31,7 +31,27 @@ sudo chmod +x /opt/bin/docker-1.8.0-dev
 
 5) We will create a custom-docker.yml and put it inside the rancher.conf
 ```
-sudo cp custom-docker.yml /var/lib/rancher.conf
+sudo vi /var/lib/rancher.conf/custom-docker.yml
+
+Addd the following in the file
+
+docker:
+  image: docker
+  links:
+  - network
+  net: host
+  pid: host
+  ipc: host
+  privileged: true
+  restart: always
+  volumes_from:
+  - all-volumes
+  labels:
+    io.rancher.os.scope: system
+  volumes:
+  - "/var/lib/rancher/state/opt/bin/docker-1.8.0-dev:/usr/bin/docker"
+
+
 ```
 
 6) We will enable the service as default and we will reboot the vagrant
