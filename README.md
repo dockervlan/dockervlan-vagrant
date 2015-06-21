@@ -21,7 +21,7 @@ vagrant up
 vagrant ssh
 ```
 
-4.) We will modify rancher os to use our dockervlan docker executable. Assuming you have succsefully create from https://github.com/dockervlan/docker the docker executable do the following inside the rancheros-01 ( assuming docker-1.8.0-dev is the created docker executable )
+4.) We will modify rancher os to use our dockervlan docker executable. Assuming you have succsefully created from https://github.com/dockervlan/docker the docker executable do the following inside the rancheros-01 ( assuming docker-1.8.0-dev is the created docker executable )
 
 ```
 sudo mkdir /opt/bin
