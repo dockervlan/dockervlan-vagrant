@@ -34,6 +34,7 @@ vagrant ssh
 ```
 
 6) Create the docker network for VLAN with id 200
+
 Note: `apt-get install vlan` and `sudo modprobe 8021q` for Ubuntu 14.04 or equivalent in other Linux distros are required for VLAN functionality.
 ```
 /opt/bin/docker-1.8.0-dev network create -d bridge --vlanid=100 --ifname=eth1 --bip=172.16.1.1/16 --fixed-cidr=172.16.1.0/24 vlan100
