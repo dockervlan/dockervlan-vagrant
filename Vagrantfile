@@ -5,9 +5,9 @@ require_relative 'vagrant_rancheros_guest_plugin.rb'
 
 # To enable rsync folder share change to false
 $rsync_folder_disabled = false
-$number_of_nodes = 1
+$number_of_nodes = 2
 $vm_mem = "1024"
-$vb_gui = false
+$vb_gui = true
 
 #download_docker_experimental = "https://github.com/dockervlan/dockervlan-vagrant/releases/tag/latest"
 download_docker_experimental = ""
