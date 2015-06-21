@@ -4,8 +4,9 @@ Quickly checkout dockervlan using Vagrant/Virtualbox.
 ## Getting started
 1.) Install dependencies
 
-* Virtualbox (Tested with 4.3.22)
+* Virtualbox (Tested with 4.3.10_Ubuntu r93012)
 * Vagrant (Tested with 1.7.2)
+
 
 2.) Clone rancherio/os-vagrant https://github.com/rancherio/os-vagrant.git
 
